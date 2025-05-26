@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Integrated Portfolio</title>
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <!-- Link to external CSS file -->
+  <link rel="stylesheet" href="style_JRC.css" />
+</head>
+<body>
+  <!-- Sidebar Navigation -->
+  <aside class="sidebar">
+    <img src="imgs/logo%20ICT.png" alt="Logo" />
+    <nav>
+      <ul>
+        <li><a href="#profile">Main Profile</a></li>
+        <li><a href="#about">Informations</a></li>
+        <li><a href="#photos">Simple Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </aside>
+    
+
+  <!-- Main Content Container -->
+  <main class="perspective effect-rotate-left">
+    <section class="container">
+      <!-- Header / Profile Section -->
+      <header id="profile" class="profile">
+        <div class="intro">
+            <h1>I'm <span class="highlight"><i>John Ryan</i></span></h1>
+          <p><em>An Information Technology Student.</em></p>
+        </div>
+        <img class="pfp" src="imgs/negii.jpg" alt="John Ryan Profile Picture" />
+        <div class="info-container">
+          <ul class="profile-info">
+            <li><i class="fa-solid fa-cake-candles"></i> April 25, 2005</li>
+            <li><i class="fa-solid fa-venus-mars"></i> Male</li>
+            <li><i class="fa-solid fa-heart"></i> Single?</li>
+            <li><i class="fa-solid fa-graduation-cap"></i> Batanes State College</li>
+          </ul>
+          <ul class="favorites-info">
+            <li><i class="fa-solid fa-utensils"></i> Favorite Food: Sinigang</li>
+            <li><i class="fa-solid fa-music"></i> Favorite Song: "Cry for Me"</li>
+            <li><i class="fa-solid fa-palette"></i> Favorite Color: Green</li>
+            <li><i class="fa-solid fa-face-laugh-beam"></i> Personality: Golden Retriever</li>
+          </ul>
+        </div>
+      </header>
+
+      <!-- Album Section with Toggle -->
+      <section class="album">
+        <input type="checkbox" id="toggleImage" hidden />
+        <label for="toggleImage" class="toggle-btn">Show My Life</label>
+        <div class="image-demo">
+          <img class="pop-img" src="imgs/Thumb%20up%20!.jpg" alt="My Life" />
+        </div>
+      </section>
+
+      <!-- About Section with Typewriter Effect -->
+      <section id="about" class="about">
+        <h2>Just call me Ry!</h2>
+        <hr />
+        <button class="info-button" onclick="typeWriter()">Click me!</button>
+        <p id="demoText"></p>
+        <script>
+          const txt = "At present, I am diligently pursuing my Bachelor of Science in Information Technology at the esteemed Batanes State College, wherein I have fostered a robust network of most supportive friends. Moreover, I take great pride in my association with the renowned street drumming ensemble, the 'Ivatan Drumbeaters.' Though life bestows its fair share of tribulations, I remain ever resolute, for each setback serves as a stepping stone toward future triumph and a more radiant morrow.";
+          let i = 0, speed = 50;
+          function typeWriter() {
+            if (i < txt.length) {
+              document.getElementById("demoText").innerHTML += txt.charAt(i);
+              i++;
+              setTimeout(typeWriter, speed);
+            }
+          }
+        </script>
+        <h3>My Skills:</h3>
+        <div class="skills">
+          <div class="skill">
+            <div class="skill-name">
+              <span>Photography</span>
+              <span>40%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress1"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <div class="skill-name">
+              <span>Web Design</span>
+              <span>30%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress2"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <div class="skill-name">
+              <span>Photoshop</span>
+              <span>20%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress3"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Social Links Section -->
+      <section class="social-links">
+        <article class="card">
+          <h2>Facebook</h2>
+          <p>Connect with me on Facebook</p>
+          <a href="https://www.facebook.com/ryan.cardona.5076" target="_blank" rel="noopener">
+            <img src="imgs/FB.jpg" alt="Facebook Icon" />
+          </a>
+        </article>
+        <article class="card">
+          <h2>Instagram</h2>
+          <p>Follow me on Instagram</p>
+          <a href="https://www.instagram.com/ryyaaaaaaaaaaaaaann" target="_blank" rel="noopener">
+            <img src="imgs/instagram.jpg" alt="Instagram Icon" />
+          </a>
+        </article>
+        <article class="card">
+          <h2>TikTok</h2>
+          <p>Watch my TikTok videos</p>
+          <a href="https://www.tiktok.com/@rynocerous_r" target="_blank" rel="noopener">
+            <img src="imgs/tiktok.jpg" alt="TikTok Icon" />
+          </a>
+        </article>
+      </section>
+
+      <!-- Photo Galleries -->
+      <section id="photos" class="photos">
+  <h1>SIMPLE GALLERY:</h1>
+  
+  <!-- Photoshop Category -->
+  <div class="photos">
+    <h3>Photoshop</h3>
+    <div class="gallery">
+      <figure>
+        <img src="imgs/clones.jpg" alt="Clone artwork" />
+        
+      </figure>
+      <figure>
+        <img src="imgs/broken_mirror.jpg" alt="Broken mirror artwork" />
+        
+      </figure>
+      <figure>
+        <img src="imgs/Steph%20Wars%20Multimedia.jpg" alt="Steph Wars Multimedia artwork" />
+        
+      </figure>
+        <figure>
+        <img src="imgs/Act5_sub.jpg" alt="Act 5 photo" />
+        
+      </figure>
+    </div>
+  </div>
+  
+  <!-- Photography Category -->
+  <div class="photo-category">
+    <h3>Photography</h3>
+    <div class="gallery">
+      <figure>
+        <img src="imgs/foto5.jpg" alt="Foto 1" />
+        
+      </figure>
+      <figure>
+        <img src="imgs/foto1.jpg" alt="Steph Wars Multimedia photo" />
+       
+      </figure>
+      <figure>
+        <img src="imgs/foto2.jpg" alt="Steph Wars Multimedia photo" />
+        
+      </figure>
+      <figure>
+        <img src="imgs/foto3.jpg" alt="Broken mirror photo" />
+        
+      </figure>
+    </div>
+  </div>
+</section>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <hr />
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+      <!-- Contact Section -->
+      <section id="contact" class="contact">
+        <h2>Contact Me</h2>
+        <p><strong>Location:</strong> <u>Llopez St., Kayvaluganan, Basco, Batanes</u></p>
+        <p><strong>Phone:</strong> <u>+6395445746439</u></p>
+        <p><strong>Email:</strong> <u>Cardonaangelo29@gmail.com</u></p>
+        <form action="mailto:Cardonaangelo29@gmail.com" method="post" enctype="text/plain">
+          <input type="text" name="username" class="input" placeholder="Username" required />
+          <input type="email" name="email" class="input" placeholder="Email" required />
+          <input type="text" name="contact" class="input" placeholder="Contact" required />
+          <textarea name="message" class="input" placeholder="Message" required></textarea>
+          <button type="submit">SEND MESSAGE</button>
+        </form>
+      </section>
+    </section>
+  </main>
+    <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    <br>
+        <br>
+        <br>
+        <br>
+        <br>
+</body>
+</html>
